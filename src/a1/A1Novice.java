@@ -7,7 +7,7 @@ public class A1Novice {
 	public static void main(String[] args) {
 		
 		Scanner scan = new Scanner(System.in);
-		System.out.println("Your Java version: " + System.getProperty("java.version"));
+		
 
 		// Your code follows here.
 		

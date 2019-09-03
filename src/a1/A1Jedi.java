@@ -8,7 +8,7 @@ public class A1Jedi {
 		
 		Scanner scan = new Scanner(System.in);
 
-		System.out.println("Your Java version: " + System.getProperty("java.version"));
+	
 		
 		int itemcount = scan.nextInt();
 		// number of items sold
