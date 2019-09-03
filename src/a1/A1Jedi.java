@@ -40,7 +40,7 @@ public class A1Jedi {
 				
 				
 				track[x] = item;
-				System.out.println(track[2]);
+				//System.out.println(track[2]);
 			}
 	
 			for (int r=0; r<track.length; r++) {
@@ -65,7 +65,7 @@ public class A1Jedi {
 									//doesn't make it here
 									if (z == (r-1)) {
 										numberofcustomers[y]++;
-										System.out.println(numberofcustomers[1]);
+										//System.out.println(numberofcustomers[1]);
 										z = r;	
 									} else {
 										z++;
