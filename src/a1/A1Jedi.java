@@ -26,26 +26,73 @@ public class A1Jedi {
 		int[] numberofcustomers = new int[itemcount];
 		int[] itemsbought = new int[itemcount];
 		
+		
 		for(int i=0; i<peoplecount; i++) {
 			people[i] = scan.next() + " " + scan.next();
 			int itemspurchased = scan.nextInt();
+			String[] track = new String[itemspurchased];
+			int[] numberofeach = new int[itemspurchased];
 			for(int x=0; x<itemspurchased; x++) {
-				int numberofeach = scan.nextInt();
+				int numberof = scan.nextInt();
+				numberofeach[x] = numberof;
 				String item = scan.next();
+				
+				
+				
+				track[x] = item;
+				System.out.println(track[2]);
+			}
+	
+			for (int r=0; r<track.length; r++) {
 				int y = 0;
 				while(y<itemcount) {
 					String a = items[y];
-					if (a.equals(item)) {
-						numberofcustomers[y]++;
-						itemsbought[y] = itemsbought[y] + numberofeach;
+					if (a.equals(track[r])) {
+						itemsbought[y] = itemsbought[y] + numberofeach[r];
+						if (r==0) {
+							numberofcustomers[y]++;
+							//System.out.println(numberofcustomers[1]);
+						} else {
+							int z = 0;
+							//System.out.println(z);
+							while(z<r) {
+								if (track[z].equals(track[r])) {
+									z = itemspurchased;
+									//doesn't make it here
+									//System.out.println(z);
+								
+								} else {
+									//doesn't make it here
+									if (z == (r-1)) {
+										numberofcustomers[y]++;
+										System.out.println(numberofcustomers[1]);
+										z = r;	
+									} else {
+										z++;
+									}
+								}
+							}
+						}
 						y = itemcount;
-						
 					} else {
 						y++;
 					}
 				}
-
+				
+				
 			}
+								
+		
+			
+						
+					
+	
+				
+			
+		
+
+			
+		
 		}
 		for (int i=0; i<itemcount; i++) {
 			
@@ -59,3 +106,4 @@ public class A1Jedi {
 		scan.close();
 	}
 }
+
